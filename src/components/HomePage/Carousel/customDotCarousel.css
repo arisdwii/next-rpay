@@ -1,0 +1,28 @@
+.carousel .control-dots {
+  margin: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+.carousel .control-dots .dot {
+  border-radius: 1rem !important;
+  box-shadow: none !important;
+  width: 8px !important;
+  height: 5px !important;
+  background-color: gray !important;
+  opacity: 1 !important;
+  margin: 0 2px !important;
+  transition: all 0.3s linear !important;
+}
+
+.carousel .control-dots .dot.selected {
+  background-color: rgba(255, 178, 15, 1) !important;
+  width: 16px !important;
+}
+
+@media (min-width: 491px) {
+  .carousel .control-dots {
+    margin: 10px 12px !important;
+  }
+}

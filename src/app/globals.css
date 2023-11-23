@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Cairo:200,300,regular,500,600,700,800,900);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-putih text-gelap font-cairo scroll-smooth transition-all ease-linear duration-300 dark:bg-gelap dark:text-putih/95;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body::-webkit-scrollbar {
+    @apply w-0 rounded-full lg:w-[6px];
+  }
+
+  body::-webkit-scrollbar-track {
+    @apply bg-inherit rounded-full;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    @apply bg-gelap2 rounded-full dark:bg-putih;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    @apply w-0;
+  }
+
+  .product-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  input[type="text"]::placeholder {
+    @apply select-none;
+  }
+
+  .custom-loader {
+    width: 50px;
+    height: 50px;
+    color: rgba(255, 178, 15, 1);
+    --c: radial-gradient(farthest-side, currentColor 92%, #0000);
+    background: var(--c) 50% 0 /12px 12px, var(--c) 50% 100%/12px 12px,
+      var(--c) 100% 50%/12px 12px, var(--c) 0 50%/12px 12px,
+      var(--c) 50% 50%/12px 12px,
+      linear-gradient(currentColor 0 0) 50% 50%/4px 100%,
+      linear-gradient(currentColor 0 0) 50% 50%/100% 4px;
+    background-repeat: no-repeat;
+    animation: s8 1s infinite linear;
+  }
+
+  @keyframes s8 {
+    to {
+      transform: rotate(0.5turn);
+    }
+  }
+}
