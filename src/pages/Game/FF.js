@@ -27,6 +27,7 @@ const FF = () => {
 
   const [visibleDetail, setVisibleDetail] = useState(false);
   const [inputWA, setInputWa] = useState(null);
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const [visibleGuideId, setVisibleGuideId] = useState(false);
 
@@ -61,6 +62,16 @@ const FF = () => {
       document.body.classList.remove("overflow-hidden");
     };
   }, [priceDenom, visibleDetail, visibleGuideId]);
+
+  const handleButtonClick = () => {
+    if (inputWA != null && inputWA.length > 9) {
+      setIsProcessing(true);
+
+      setTimeout(() => {
+        window.location = "/";
+      }, 2000);
+    }
+  };
 
   const lastPriceQris = () => {
     const numberPrice = parseFloat(priceDenom.replace(/[\.,]/g, ""));
@@ -523,18 +534,26 @@ const FF = () => {
                   Batalkan
                 </button>
                 <button
-                  onClick={
-                    inputWA != null && inputWA.length > 9
-                      ? () => (window.location = "/")
-                      : null
-                  }
+                  onClick={handleButtonClick}
+                  disabled={isProcessing}
                   className={`w-1/2 rounded-md text-center text-sm font-semibold py-1.5 sm:py-2.5 sm:text-base lg:py-2 lg:text-sm ${
                     inputWA != null && inputWA.length > 9
-                      ? "bg-primary hover:bg-primary/80"
-                      : "bg-gray-300"
+                      ? "bg-primary hover:bg-primary/80 cursor-pointer"
+                      : "bg-gray-300 cursor-default"
+                  } ${
+                    isProcessing
+                      ? "bg-gray-300 cursor-default"
+                      : "bg-gray-300 cursor-pointer"
                   }`}
                 >
-                  konfirmasi
+                  {isProcessing ? (
+                    <span className="flex items-center justify-center gap-1">
+                      <Icon icon="line-md:loading-twotone-loop" />
+                      Memproses...
+                    </span>
+                  ) : (
+                    "Konfirmasi"
+                  )}
                 </button>
               </div>
             </div>
