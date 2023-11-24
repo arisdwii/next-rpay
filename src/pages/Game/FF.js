@@ -540,11 +540,7 @@ const FF = () => {
                     inputWA != null && inputWA.length > 9
                       ? "bg-primary hover:bg-primary/80 cursor-pointer"
                       : "bg-gray-300 cursor-default"
-                  } ${
-                    isProcessing
-                      ? "bg-gray-300 cursor-wait"
-                      : "bg-gray-300 cursor-pointer"
-                  }`}
+                  } ${isProcessing ? "cursor-wait" : "cursor-pointer"}`}
                 >
                   {isProcessing ? (
                     <span className="flex items-center justify-center gap-1">
