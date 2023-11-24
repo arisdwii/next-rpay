@@ -37,6 +37,7 @@ export const CardSearchProduct = ({ inputValue, searchProduct, isFocus }) => {
                 alt={title}
                 width={1000}
                 height={1000}
+                placeholder="blur"
                 draggable="false"
                 priority={true}
                 className="w-10 h-10 aspect-square object-cover object-center transition-all ease-linear group-hover:scale-110 sm:w-14 sm:h-14"

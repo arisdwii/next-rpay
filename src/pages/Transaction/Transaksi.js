@@ -4,6 +4,7 @@ import React from "react";
 
 import { ContentTransaksi } from "@/components/Transaction/ContentTransaksi";
 import { TextInput } from "@/components/TextInput";
+
 const Transaksi = () => {
   const [inputValue, setInputValue] = useState("");
 

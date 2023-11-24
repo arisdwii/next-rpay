@@ -32,6 +32,7 @@ export const CarouselBanner = () => {
                   priority={true}
                   width={1000}
                   height={1000}
+                  placeholder="blur"
                   draggable="false"
                   className="w-full h-full object-cover object-center aspect-2.5/1"
                 />

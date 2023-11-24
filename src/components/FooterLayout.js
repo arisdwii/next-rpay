@@ -48,6 +48,7 @@ export const FooterLayout = () => {
         <div className="col-span-2 lg:col-span-1 lg:w-full">
           <Image
             src={Logo}
+            placeholder="blur"
             alt="Logo RPay Voucher"
             className="mb-3 w-16 sm:w-20"
             draggable="false"

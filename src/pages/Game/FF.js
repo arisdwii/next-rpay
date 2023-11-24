@@ -295,6 +295,8 @@ const FF = () => {
                                     width={1000}
                                     height={1000}
                                     priority
+                                    placeholder="blur"
+                                    draggable="false"
                                   />
                                 </div>
                                 <p
@@ -412,6 +414,8 @@ const FF = () => {
                       alt="search-id"
                       width={1000}
                       height={1000}
+                      draggable="false"
+                      placeholder="blur"
                       priority
                       className="w-full h-full object-cover object-center"
                     />

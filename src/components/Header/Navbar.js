@@ -56,6 +56,7 @@ export const Navbar = () => {
         <Link href="/">
           <Image
             src={Logo}
+            placeholder="blur"
             width={1000}
             height={1000}
             draggable="false"

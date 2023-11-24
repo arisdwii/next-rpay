@@ -13,6 +13,7 @@
     "next-nprogress-bar": "^2.1.2",
     "next-themes": "^0.2.1",
     "react": "^18",
+    "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18",
     "react-responsive-carousel": "^3.2.23",
     "sharp": "^0.32.6",

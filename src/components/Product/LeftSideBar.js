@@ -22,6 +22,7 @@ export const LeftSideBar = ({
               alt={alt}
               width={1000}
               height={1000}
+              placeholder="blur"
               draggable="false"
               priority={true}
               className="aspect-square object-cover object-center"

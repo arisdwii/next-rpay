@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import React from "react";
 
-import { dataTournament } from "@/data/dataTournament";
 import { TournamentDetail } from "@/components/Tournament/TournamentDetail";
+import { BtnScrollToTop } from "@/components/BtnScrollToTop";
+import { dataTournament } from "@/data/dataTournament";
 import { TextInput } from "@/components/TextInput";
 
 const WarGame = () => {
@@ -87,6 +88,7 @@ const WarGame = () => {
                           alt={title}
                           width={1000}
                           height={1000}
+                          placeholder="blur"
                           draggable="false"
                           priority={true}
                           className="aspect-square object-cover object-center transition-all ease-linear group-hover:scale-110"
@@ -117,6 +119,8 @@ const WarGame = () => {
             showWarDetail={showWarDetail}
             toggleShowWarDetail={toggleShowWarDetail}
           />
+
+          <BtnScrollToTop />
         </>
       )}
 

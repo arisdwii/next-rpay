@@ -6,9 +6,10 @@ import Link from "next/link";
 
 import { FilterLayoutProduct } from "@/components/HomePage/FilterLayoutProduct";
 import { CarouselBanner } from "@/components/HomePage/Carousel/CarouselBanner";
+import { BtnScrollToTop } from "@/components/BtnScrollToTop";
 import { dataProductCards } from "@/data/dataProductCards";
 
-export default function Beranda() {
+const Beranda = () => {
   const [cardDataProduct, setCardDataProduct] = useState([]);
 
   useEffect(() => {
@@ -48,11 +49,12 @@ export default function Beranda() {
                     <Image
                       src={image}
                       alt={title}
-                      className="w-full h-full aspect-square object-cover object-center transition-all ease-linear group-hover:scale-110"
-                      draggable="false"
-                      priority={true}
                       width={1000}
                       height={1000}
+                      priority={true}
+                      placeholder="blur"
+                      draggable="false"
+                      className="w-full h-full aspect-square object-cover object-center transition-all ease-linear group-hover:scale-110"
                     />
                   </div>
                   <p className="product-title p-1 overflow-hidden text-ellipsis xl:pt-2 transition-all ease-linear group-hover:text-primary">
@@ -64,6 +66,10 @@ export default function Beranda() {
           </div>
         ))}
       </section>
+
+      <BtnScrollToTop />
     </main>
   );
-}
+};
+
+export default Beranda;

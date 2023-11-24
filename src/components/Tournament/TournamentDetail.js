@@ -52,6 +52,7 @@ export const TournamentDetail = ({
                 width={1000}
                 height={1000}
                 draggable="false"
+                placeholder="blur"
                 priority={true}
                 className="rounded-md w-full md:max-w-[350px] mx-auto"
               />
