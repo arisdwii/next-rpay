@@ -542,7 +542,7 @@ const FF = () => {
                       : "bg-gray-300 cursor-default"
                   } ${
                     isProcessing
-                      ? "bg-gray-300 cursor-default"
+                      ? "bg-gray-300 cursor-wait"
                       : "bg-gray-300 cursor-pointer"
                   }`}
                 >
