@@ -1,12 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import React from "react";
 
 import { dataTournament } from "@/data/dataTournament";
 import { TournamentDetail } from "@/components/Tournament/TournamentDetail";
 import { TextInput } from "@/components/TextInput";
 
-export const WarGame = () => {
+const WarGame = () => {
   const [inputValue, setInputValue] = useState("");
 
   const [showWarDetail, setShowWarDetail] = useState(false);
@@ -127,3 +128,5 @@ export const WarGame = () => {
     </main>
   );
 };
+
+export default WarGame;

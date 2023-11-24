@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
+import React from "react";
 
 import { ContentTransaksi } from "@/components/Transaction/ContentTransaksi";
 import { TextInput } from "@/components/TextInput";
-
-export const Transaksi = () => {
+const Transaksi = () => {
   const [inputValue, setInputValue] = useState("");
 
   const handleSubmit = (e) => {
@@ -47,3 +47,5 @@ export const Transaksi = () => {
     </main>
   );
 };
+
+export default Transaksi;

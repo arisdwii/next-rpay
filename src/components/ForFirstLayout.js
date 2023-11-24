@@ -4,7 +4,7 @@ import { ThemeProvider } from "next-themes";
 import { useState, useEffect } from "react";
 
 import { Navbar } from "@/components/Header/Navbar";
-import { Loading } from "@/components/Loading";
+import { Loader } from "@/components/Loader";
 import { FooterLayout } from "./FooterLayout";
 
 export const ForFirstLayout = ({ children }) => {
@@ -23,7 +23,7 @@ export const ForFirstLayout = ({ children }) => {
   return (
     <>
       {isLoading ? (
-        <Loading />
+        <Loader />
       ) : (
         <ThemeProvider attribute="class" enableColorScheme={false}>
           <AppProgressBar color="#ffb20f" options={{ showSpinner: false }} />

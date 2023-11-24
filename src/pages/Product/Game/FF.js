@@ -2,12 +2,13 @@
 import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
+import React from "react";
 
 import { dataGameFF } from "@/data/Product/Game/dataGameFF";
 import { LeftSideBar } from "@/components/Product/LeftSideBar";
 import { SelectProductIcon } from "@/components/Product/SelectProductIcon";
 
-export const FF = () => {
+const FF = () => {
   const [isFocus, setIsFocus] = useState(false);
   const [inputId, setInputId] = useState("");
 
@@ -520,7 +521,7 @@ export const FF = () => {
                 <button
                   onClick={
                     inputWA != null && inputWA.length > 9
-                      ? (() => window.location = "/")
+                      ? () => (window.location = "/")
                       : null
                   }
                   className={`w-1/2 rounded-md text-center text-sm font-semibold py-1.5 sm:py-2.5 sm:text-base lg:py-2 lg:text-sm ${
@@ -539,3 +540,5 @@ export const FF = () => {
     </>
   );
 };
+
+export default FF;

@@ -1,10 +1,12 @@
-import { WarGame } from "@/pages/Tournament/WarGame";
+import WarGame from "@/pages/Tournament/WarGame";
 
 export const metadata = {
   title: "Tournament || RPay Voucher",
   description: "Tournament Game Terlengkap Hanya ada di RPay Voucher",
 };
 
-export default function Tournament() {
+const TournamentPage = () => {
   return <WarGame />;
-}
+};
+
+export default TournamentPage;

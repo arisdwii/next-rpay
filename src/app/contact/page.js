@@ -1,10 +1,12 @@
-import { HubungiKami } from "@/pages/Contact/HubungiKami";
+import HubungiKami from "@/pages/Contact/HubungiKami";
 
 export const metadata = {
   title: "Hubungi Kami || RPay Voucher",
   description: "Topup Produk Game/PPOB Termurah di Indonesia",
 };
 
-export default function Contact() {
+const ContactPage = () => {
   return <HubungiKami />;
-}
+};
+
+export default ContactPage;

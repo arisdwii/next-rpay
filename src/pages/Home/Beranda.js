@@ -8,7 +8,7 @@ import { FilterLayoutProduct } from "@/components/HomePage/FilterLayoutProduct";
 import { CarouselBanner } from "@/components/HomePage/Carousel/CarouselBanner";
 import { dataProductCards } from "@/data/dataProductCards";
 
-export const Beranda = () => {
+export default function Beranda() {
   const [cardDataProduct, setCardDataProduct] = useState([]);
 
   useEffect(() => {
@@ -66,4 +66,4 @@ export const Beranda = () => {
       </section>
     </main>
   );
-};
+}

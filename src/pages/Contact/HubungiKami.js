@@ -2,8 +2,9 @@
 import { Accordion } from "@/components/Contact/Accordion";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import React from "react";
 
-export const HubungiKami = () => {
+const HubungiKami = () => {
   return (
     <main className="w-full max-w-[600px] h-full px-2 mx-auto my-[70px] sm:px-3 sm:my-[90px] ip:px-4 md:my-24 xl:max-w-screen-lg">
       <section className="flex flex-col gap-10">
@@ -42,3 +43,5 @@ export const HubungiKami = () => {
     </main>
   );
 };
+
+export default HubungiKami;

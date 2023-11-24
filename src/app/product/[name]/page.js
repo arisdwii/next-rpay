@@ -1,4 +1,4 @@
-import { FF } from "@/pages/Product/Game/FF";
+import FF from "@/pages/Product/Game/FF";
 
 export const metadata = {
   title: "TopUp Free Fire || RPay Voucher",
